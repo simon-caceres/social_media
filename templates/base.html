@@ -1,0 +1,30 @@
+{% load static %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+    <!--Favicon-->
+
+    <!-- AlpineJS -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+
+    <!--Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--JQuery-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <title> </title>
+</head>
+<body class="bg-gray-100 dark:bg-dark-main flex justify-center">
+    {% block navbar %} {% endblock navbar %}
+    {% block left_sidebar %} {% endblock left_sidebar %}
+    {% block content %}{% endblock content %}
+    {% block right_sidebar %}{% endblock right_sidebar %}
+    {% block footer %}{% endblock footer %}
+    {% block javascript %}{% endblock javascript %}
+</body>
+</html>
