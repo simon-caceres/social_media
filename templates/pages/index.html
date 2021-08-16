@@ -1,12 +1,29 @@
+
 {% extends 'base.html' %}
+{% load static %}
 
 {% block navbar %}
-    {% include 'components/navbar.html' %}
+{% include 'components/navbar.html' %}
 {% endblock navbar %}
-{% block left_sidebar %} {% endblock left_sidebar %}
+
+
+{% block left_sidebar %}
+    {% include 'components/sidebars/left/sidebar.html' %}
+{% endblock left_sidebar %}
+
+
 {% block content %}
-    <p class="text-rose-200" >heloo</p>
+    <p class="text-rose-200">test</p>
 {% endblock content %}
-{% block right_sidebar %}{% endblock right_sidebar %}
-{% block footer %}{% endblock footer %}
+
+
+{% block right_sidebar %}
+    <p class="text-rose-200">test</p>
+{% endblock right_sidebar %}
+
+
+
+{% block footer %}
+{% endblock footer %}
+
 {% block javascript %}{% endblock javascript %}
