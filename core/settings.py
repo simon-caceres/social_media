@@ -29,11 +29,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.humanize',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'crispy_forms',
+    'crispy_tailwind',
     'core',
     'social',
     'tailwind',
     'theme'
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+CRISPY_TEMPLATE_PACK = "tailwind"
 
 NPM_BIN_PATH = r'C:\Program Files\nodejs\npm.cmd'
 
@@ -42,6 +52,13 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -116,7 +133,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_URL = './static/'
+STATIC_URL = '/static/'
 
 STATICSFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')

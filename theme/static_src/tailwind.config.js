@@ -61,11 +61,13 @@ module.exports = {
             sky: colors.sky,
             teal: colors.teal,
             rose: colors.rose,
+            blue: colors.blue,
         },
         colors: {
             sky: colors.sky,
             teal: colors.teal,
             rose: colors.rose,
+            blue: colors.blue,
             'dark-main': '#18191A',
             'dark-second': '#242526',
             'dark-third': '#3A3B3C',
