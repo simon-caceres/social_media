@@ -1,0 +1,24 @@
+{% extends 'users/base.html' %}
+
+{% load static %}
+{% load humanize %}
+{% load tailwind_tags %}
+{% load tailwind_filters %}
+
+{% block navbar %}
+    {% include 'components/navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+    <main class="min-h-screen w-full py-5 overflow-x-hidden">
+        <div class='relative bg-gray-800 max-w-full'>
+            <div class='absolute inset-0'>
+                <img class="w-full h-full object-cover" src={{profile.banner.url}}></img>
+                <div class="absolute inset-0 mix-blend-multiply" aria-hidden="true"> </div>
+            </div>
+            <div class="relative max-w-7x1 mx-auto py-24 px-4 sm:py-32 lg:px-8">
+            
+            </div>
+        </div>
+    </main>
+{% endblock content %}

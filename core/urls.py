@@ -9,7 +9,9 @@ from .views import HomeView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',HomeView.as_view(), name='home'),
-    path('accounts/', include('allauth.urls'))
+    path('accounts/', include('allauth.urls')),
+
+    path('users/', include('accounts.urls', namespace='users')),
 ]
 
 if settings.DEBUG:

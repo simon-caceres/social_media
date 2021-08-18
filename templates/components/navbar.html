@@ -25,7 +25,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
-                    <span class="mx-2 font-semibold dark:text-dark-txt">0.00</span>
+                    <span class="mx-2 font-semibold dark:text-dark-txt"> {{user.profile.coins}} </span>
                 </a>
 
                 <div class="relative bg-gray-100 dark:bg-dark-third px-2 py-2 w-10 h-10 sm:w-11 sm:h-11 lg:h-10 lg:w-10 xl:w-max xl:pl-3 xl:pr-8 rounded-full flex items-center justify-center cursor-pointer">
@@ -64,7 +64,7 @@
                 <i class='bx bx-group'></i>
             </a>
         </li>
-        <li class="w-1/5 md:w-max text-center hidden md:inline-block">
+        <li class="w-1/5 md:w-max text-center hidden md:inline-block lg:hidden">
             <button @click="open=true" class="w-full text-3xl py-2 px-3 xl:px-12 cursor-pointer text-center inline-block rounded text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-third dark:text-dark-txt relative">
                 <i class='bx bx-menu'></i>
             </button>
@@ -129,8 +129,15 @@
             <span class="mx-2 font-semibold dark:text-dark-txt text-white">Register</span>
         </a>
     {% else %}
-
+        <div href="#" class="inline-flex items-center justify-center p-1 rounded-full hover:bg-gray-200 dark:hover:bg-dark-third mx-1">
+            <i class='bx bx-coin text-yellow-400'></i>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span class="mx-2 font-semibold dark:text-dark-txt"> {{user.profile.coins}} </span>
+        </div>
         <li>
+            
             <div x-data="{open:false}">
             <div @click="open=true" class="text-xl grid place-items-center dark:bg-dark-second bg-gray-200 dark:bg-dark-third dark:text-dark-txt rounded-full mx-1 p-3 cursor-pointer hover:bg-gray-300 relative">
                 <i class='bx bxs-bell'></i>
