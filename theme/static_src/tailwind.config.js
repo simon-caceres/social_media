@@ -68,6 +68,7 @@ module.exports = {
             teal: colors.teal,
             rose: colors.rose,
             blue: colors.blue,
+            indigo: colors.indigo,
             'dark-main': '#18191A',
             'dark-second': '#242526',
             'dark-third': '#3A3B3C',
