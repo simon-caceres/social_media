@@ -2,10 +2,12 @@
 
 <ul class="p-4">
     <li>
+    {% if user.is_authenticated %}
         <a href="{% url 'users:profile' user.username %}" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
             <img src="{{user.profile.picture.url}}" alt="Profile" class="w-10 h-10 rounded-full">
             <span class="font-semibold"> {{user.username}} </span>
         </a>
+    {% endif %}
     </li>
     <li>
         <a href="" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third dark:focus:bg-dark-second">
